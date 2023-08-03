@@ -36,36 +36,31 @@ export const Skills = () => {
                         <p>Experienced DevOps engineer and web developer adept in creating responsive websites and managing deployment pipelines. Skilled in cloud services, version control, and problem-solving. Proficient in JavaScript, Python, and implementing CI/CD pipelines for seamless software delivery.</p>
                         <Carousel responsive={responsive} infinite={true} className="owl-carousel owl-theme skill-slider">
                             <div className="item">
-                                <img src={meter1} alt="Image" />
+                                <img src={meter1} alt="HTML" />
                                 <h5>HTML</h5>
                             </div>
                             <div className="item">
-                                <img src={meter3} alt="Image" />
-                                <h5>HTML</h5>
-                            </div>
-                            <div className="item">
-                                <img src={meter2} alt="Image" />
+                                <img src={meter2} alt="AWS" />
                                 <h5>AWS</h5>
                             </div>
                             <div className="item">
-                                <img src={meter3} alt="Image" />
+                                <img src={meter3} alt="Git & GitHub" />
                                 <h5>Git & GitHub</h5>
                             </div>
                             <div className="item">
-                                <img src={meter1} alt="Image" />
+                                <img src={meter1} alt="Docker" />
                                 <h5>Docker</h5>
                             </div>
                             <div className="item">
-                                <img src={meter2} alt="Image" />
-                                <h5>kubernetes</h5>
+                                <img src={meter2} alt="Kubernetes" />
+                                <h5>Kubernetes</h5>
                             </div>
-
                         </Carousel>
                     </div>
                 </div>
             </div>
         </div>
-        <img className="background-image-left" src={colorSharp} alt="Image" />
+        <img className="background-image-left" src={colorSharp} alt="Background" />
     </section>
   )
 }
