@@ -1,23 +1,20 @@
-# Use an official Node.js runtime as a base image
-FROM node:18.16.1
-
-# Set the working directory inside the container
+# Stage 1: Build React frontend
+FROM node:14 as frontend
 WORKDIR /app
-
-# Copy the package.json and package-lock.json (if available) to the container
-COPY package*.json ./
-
-# Install project dependencies
+COPY ./Personal_portfolio/package*.json ./
 RUN npm install
-
-# Copy all the files from the current directory to the container
-COPY . .
-
-# Build the React app
+COPY ./Personal_portfolio ./
 RUN npm run build
 
-# Expose the port on which the React app will run (if needed)
-# EXPOSE 3000
+# Stage 2: Build Express server
+FROM node:14
+WORKDIR /app
+COPY ./server/package*.json ./
+RUN npm install
+COPY ./server ./
 
-# Start the React app when the container starts
+# Expose port 5000 for the Express server
+EXPOSE 5000
+
+# Start the Express server
 CMD ["npm", "start"]
