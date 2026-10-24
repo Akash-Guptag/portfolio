@@ -4,7 +4,7 @@ A responsive portfolio rebuilt from the existing React 18 / Create React App rep
 
 ## Run locally
 
-Use Node.js 22 LTS or a compatible recent Node release with npm. The rebuild was verified with Node 25.2.1 and npm 11.6.2.
+Use Node.js 24 with npm. The package engines field pins Vercel to Node.js 24, overriding the discontinued Node.js 18 project setting. The rebuild was verified with Node 25.2.1 and npm 11.6.2.
 
 ```sh
 npm ci --legacy-peer-deps
